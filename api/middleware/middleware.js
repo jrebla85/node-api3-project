@@ -12,7 +12,7 @@ function logger(req, res, next) {
   next();
 }
 
-function validateUserId(req, res, next) {
+async function validateUserId (req, res, next) {
   const {id} = req.params
   try{
   const user = await getById(id);
